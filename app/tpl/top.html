@@ -1,0 +1,31 @@
+
+<div class="top">
+
+    <div class="top-bar">
+        <v-link class="left" href="/left">
+            <img src="../img/home1.png" />
+        </v-link>
+
+        <p>{{page}}</p>
+        <a class="right" v-on:click="topFun()">
+            <img src="../img/other1.png" />
+        </a>
+    </div>
+    
+    <div class="top-cont bg-box" v-if = "topShow">
+
+        <div class="login-box">
+        <p> 
+            <v-link href="/login">
+                Login
+            </v-link>
+        </p>
+        <p>
+            <v-link href="/login">
+                Login
+            </v-link>
+        </p>       
+        </div>      
+    </div>
+</div>
+

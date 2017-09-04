@@ -1,0 +1,74 @@
+.mint-swipe,.mint-swipe-items-wrap{overflow:hidden;position:relative;height:100%}
+.mint-swipe-items-wrap>div{position:absolute;-webkit-transform:translateX(-100%);
+transform:translateX(-100%);width:100%;height:auto;display:none}
+.mint-swipe-items-wrap>div.is-active{display:block;-webkit-transform:none;transform:none}
+.mint-swipe-indicators{position:absolute;bottom:10px;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%)}
+.mint-swipe-indicator{width:8px;height:8px;display:inline-block;border-radius:100%;background:#000;opacity:.2;margin:0 3px}
+.mint-swipe-indicator.is-active{background:#fff}
+.my-swipe {
+    height: 12rem;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    box-shadow:0 0 2px 2px #ccc;
+    background: #fff;
+}
+.my-swipe a{
+    display: block;
+    width:100%;
+    height: auto
+}
+.my-swipe a img{
+    display: block;
+    width: 100%;
+    /* height: 15rem; */
+    margin: 0 auto;
+}
+
+.home-list{
+    width: 100%;
+    background: #fff;
+    height: 1rem;
+    padding: .5rem 0;
+    margin: .3rem 0;
+    color: #a6b1b0;
+    text-shadow: 2px 2px 2px #ccc;
+    overflow: hidden;
+    box-shadow:0 0 2px 2px #ccc;
+}
+.home-list ul{
+    width: 100%;
+    height: auto;
+}
+.home-list ul.list-ul{
+    animation:mymove 20s linear infinite;
+    -webkit-animation:mymove 20s linear infinite;
+}
+
+@keyframes mymove {
+    0%{
+        transform: translateY(0%)
+    }
+
+    100%{
+       transform: translateY(-95%) 
+    }
+}
+@-webkit-keyframes mymove {
+    0%{
+        transform: translateY(0%)
+    }
+
+    100%{
+       transform: translateY(-95%) 
+    }
+}
+.home-list ul li{
+    height: 2rem;
+    line-height: 2rem;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+    text-indent: 1rem;
+    color: #a6b1b0;
+}
