@@ -2,7 +2,7 @@
 export default (Vue , options = {})=>{
 
 
-    function eneygy(en,t,w,h){
+    function eneygy(en,t,w,h,data){
 
         let timer,curtime=0;
 
@@ -24,7 +24,7 @@ export default (Vue , options = {})=>{
             }
 
             curtime++;
-            if(curtime == t*10){
+            if(curtime == t*10 || data.time <=0){
                 clearInterval(timer);
             }
 
@@ -46,17 +46,54 @@ export default (Vue , options = {})=>{
 
     }
 
+    function move(el,btn,btnsize,w,h,en,data){
+        el.addEventListener("touchmove",moveFun,false);
+        function moveFun(){
+            event.preventDefault();
+
+            if(data.time <=0 ){
+                return false;
+            }
+            var x = event.touches[0].pageX,
+                yy = event.touches[0].pageY,
+                top = yy-btnsize/2,
+                left = x-btnsize/2;
+
+                btn.setAttribute("style","width:"+btnsize+"px;height:"+btnsize+"px;border-radius:"+btnsize/2+"px;top:"+top+"px;left:"+left+"px")
+
+                for(let y = 0;y < en.length; y++){
+
+                    if((en[y].top/2 - btnsize/2 < yy &&  en[y].top/2 + btnsize/2 > yy) && (en[y].left/2 - btnsize/2 < x && en[y].left/2 + btnsize/2 > x)){
+                        data.shownum = (data.shownum*1 + en[y].siznum*1).toFixed(2);
+                        btnsize += en[y].siznum/100 * 1;
+                        en.splice(y,"1");
+
+                    }
+
+                }
+            
+        }
+    }
+
     var canvasone = function(ele,binding){
         let w = ele.offsetWidth*2,
             h = ele.offsetHeight*2,
-            time = 60,
             en = [],
             oldtimer,
-            indx = 0;
+            indx = 0,
+            btnsize = 20,
+            data = binding.value,
+            time = data.time;
+
+
 
         let canvas = document.createElement("canvas");
         let canvas1 = document.createElement("canvas");
+        let btn = document.createElement("div");
+        
 
+        btn.setAttribute("class","mov-btn")
+        btn.setAttribute("style","width:"+btnsize+"px;height:"+btnsize+"px;border-radius:"+btnsize/2+"px;")
         let ctx1 = canvas1.getContext('2d')
 
         canvas.width = w;
@@ -67,14 +104,20 @@ export default (Vue , options = {})=>{
 
         ele.appendChild(canvas);
         ele.appendChild(canvas1);
+        ele.appendChild(btn);
         
-        eneygy(en,time,w,h);
+        eneygy(en,time,w,h,data);
+        move(ele,btn,btnsize,w/2,h/2,en,data);
         //能量
         oldtimer = setInterval(function(){
 
             // console.log(en);
 
             indx += 0.1;
+            if(data.time >0){
+                data.time = (data.time*1 - 0.2).toFixed(2);
+            }
+            
             if(indx == time){
                 clearInterval(oldtimer);
             }
