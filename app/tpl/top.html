@@ -2,9 +2,10 @@
 <div class="top">
 
     <div class="top-bar">
-        <v-link class="left" href="/left">
+
+        <router-link to="/">
             <img src="../img/home1.png" />
-        </v-link>
+        </router-link>
 
         <p>{{page}}</p>
         <a class="right" v-on:click="topFun()">
@@ -16,15 +17,10 @@
 
         <div class="login-box">
         <p> 
-            <v-link href="/login">
-                Login
-            </v-link>
-        </p>
-        <p>
-            <v-link href="/login">
-                Login
-            </v-link>
-        </p>       
+            <router-link to="/one">
+                one
+            </router-link>
+        </p>   
         </div>      
     </div>
 </div>

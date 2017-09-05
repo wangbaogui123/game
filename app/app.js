@@ -2,6 +2,7 @@ import Vue from 'vue'
 import routers from './router'
 import axios from 'axios'
 import VueRouter from 'vue-router'
+import canvasone from './canvasone'
 import { Swipe, SwipeItem } from 'vue-swipe'
 // import VLink from './components/VLink.vue'
 
@@ -15,6 +16,7 @@ require('./css/top.css')
 require('./component.js')(Vue)
 
 Vue.use(VueRouter);
+Vue.use(canvasone);
 
 
 const routes = routers();
