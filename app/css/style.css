@@ -69,8 +69,8 @@ input[type="button"], input[type="submit"], input[type="reset"] {-webkit-appeara
 
 @keyframes colormove {
     0%{
-		color: #17c6ee;
-		background: #17c6ee;
+		color: #ff5f3d;
+		background:#ff5f3d;
     }
     10%{
 		color: #ec5399;
@@ -115,8 +115,8 @@ input[type="button"], input[type="submit"], input[type="reset"] {-webkit-appeara
 }
 @-webkit-keyframes colormove {
     0%{
-		color: #17c6ee;
-		background:#17c6ee;
+		color: #ff5f3d;
+		background:#ff5f3d;
     }
     10%{
 		color: #ec5399;

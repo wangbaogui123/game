@@ -74,7 +74,7 @@ export default (Vue , options = {})=>{
 
             // console.log(en);
 
-            indx += 0.2;
+            indx += 0.1;
             if(indx == time){
                 clearInterval(oldtimer);
             }
@@ -93,7 +93,7 @@ export default (Vue , options = {})=>{
                 ctx1.fill();
             }
 
-        },200)
+        },100)
         
 
 
