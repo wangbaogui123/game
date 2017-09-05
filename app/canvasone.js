@@ -93,7 +93,7 @@ export default (Vue , options = {})=>{
                 ctx1.fill();
             }
 
-        },100)
+        },200)
         
 
 

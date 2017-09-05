@@ -15016,7 +15016,7 @@ function applyToTag (styleElement, obj) {
                 ctx1.stroke();
                 ctx1.fill();
             }
-        }, 100);
+        }, 200);
     };
 
     Vue.directive('canvasone', {
