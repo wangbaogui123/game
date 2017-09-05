@@ -14183,7 +14183,7 @@ exports = module.exports = __webpack_require__(7)(undefined);
 
 
 // module
-exports.push([module.i, "body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,blockquote,th,td,p,header,footer,html{margin:0;padding:0;font-weight:normal;}\ninput,button,select,textarea{outline:none; vertical-align:middle;font-weight: 300;color:#333;}\ninput::-moz-focus-inner{ border: 0;padding: 0;}\nli{list-style:none;font-weight:normal;}\nem,i{font-style:normal;}\na,li,p{text-decoration: none;font-weight:300;color: #333;-webkit-tap-highlight-color:rgba(0,0,0,0);-moz-tap-highlight-color:rgba(0,0,0,0);-ms-tap-highlight-color:rgba(0,0,0,0);-o-tap-highlight-color:rgba(0,0,0,0);tap-highlight-color:rgba(0,0,0,0)}\nimg{border:none}\ntextarea{resize:none}\nheader,nav,section,article,footer,figure,figcaption{display:block;}\ninput[type=\"text\"],input[type=\"search\"],input[type=\"password\"]{ -ms-appearance: none; -o-appearance: none; -moz-appearance: none; -webkit-appearance: none; appearance: none; list-style: none;border: none;}\nbody{background: #e6e6e6;color:#404040;text-align:center;min-width:320px;width: 100%; min-height: 100%;font-family: \"Source Sans Pro\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;}\nhtml {background: #e6e6e6;max-width: 768px; min-width: 320px; width: 100%; min-height: 100%; margin: 0 auto;}\ninput[type=\"button\"], input[type=\"submit\"], input[type=\"reset\"] {-webkit-appearance: none;}\n.clearfix:after{ visibility:hidden; display:block; font-size:0; content:\" \"; clear:both; height:0;}\n.clearfix{ zoom:1;}\n\n/*device-width*/\n@media only screen and (max-width: 359px) { html { font-size:85%; } }\n@media only screen and (min-width: 360px) and (max-width: 399px) { html { font-size: 100%; } }\n@media only screen and (min-width: 400px) and (max-width: 479px) { html { font-size: 112.5%; } }\n@media only screen and (min-width: 480px) and (max-width: 539px) { html { font-size: 125%; } }\n@media only screen and (min-width: 540px) and (max-width: 599px) { html { font-size: 150%; } }\n@media only screen and (min-width: 600px) and (max-width: 639px) { html { font-size: 165%; } }\n@media only screen and (min-width: 640px) and (max-width: 719px) { html { font-size: 177.5%; } }\n@media only screen and (min-width: 720px) and (max-width: 767px) { html { font-size: 200%; } }\n@media only screen and (min-width: 768px) { html { font-size: 100%; } }\n\n.app{\n\twidth: 100%;\n\theight: auto;\n\tposition: relative;\n}\n.box{\n\twidth: 98%;\n\tmargin: .3rem auto;\n\tmin-height:20rem;\n\theight: auto;\n\tmargin-top:3.3rem;\n\tpadding-bottom: 1rem; \n\tbox-shadow: 0px 2px 3px #ccc;\n}\n.bg-box{\n\twidth: 100%;\n\theight: auto;\n\tbackground: -webkit-linear-gradient(left top, #edf6f8 , #88c5d6); /* Safari 5.1 - 6.0 */\n  \tbackground: -o-linear-gradient(bottom right, #edf6f8, #88c5d6); /* Opera 11.1 - 12.0 */\n    background: -moz-linear-gradient(bottom right, #edf6f8, #88c5d6); /* Firefox 3.6 - 15 */\n    background: linear-gradient(to bottom right, #edf6f8 , #88c5d6); /* 标准的语法 */\n}\n.footer{\n\twidth:98%;\n\tmargin: 0 auto;\n\tbackground: #fff;\n\tpadding: 1rem 0;\n\tfont-size: .9rem;\n\tbox-shadow: 1px 3px 5px #ccc;\n}\n.footer p{\n\tcolor: #a6b1b0;\n\tfont-weight: 300;\n\tline-height: 1.5rem;\n\theight: 1.5rem;\n\ttext-shadow: 2px 2px 2px #ccc;\n}\n.colorMove{\n\tanimation:colormove 20s linear infinite;\n    -webkit-animation:colormove 20s linear infinite;\n}\n\n@keyframes colormove {\n    0%{\n\t\tcolor: #17c6ee;\n\t\tbackground: #17c6ee;\n    }\n    10%{\n\t\tcolor: #ec5399;\n\t\tbackground:#ec5399;\n    }\n    20%{\n\t\tcolor: #fff537;\n\t\tbackground:#fff537;\n    }\n    30%{\n\t\tcolor: #ff4b5a;\n\t\tbackground:#ff4b5a;\n    }\n    40%{\n\t\tcolor: #57b846;\n\t\tbackground:#57b846;\n    }\n    50%{\n\t\tcolor: #f74877;\n\t\tbackground:#f74877;\n    }\n    60%{\n\t\tcolor: #62d8b6;\n\t\tbackground:#62d8b6;\n    }\n    70%{\n\t\tcolor: #ff5f3d;\n\t\tbackground:#ff5f3d;\n    }\n    80%{\n\t\tcolor: #ff8e50;\n\t\tbackground:#ff8e50;\n    }\n    90%{\n\t\tcolor: #ffe048;\n\t\tbackground:#ffe048;\n    }\n    100%{\n\t   color: #fa4251;\n\t   background:#fa4251;\n    }\n}\n@-webkit-keyframes colormove {\n    0%{\n\t\tcolor: #17c6ee;\n\t\tbackground:#17c6ee;\n    }\n    10%{\n\t\tcolor: #ec5399;\n\t\tbackground:#ec5399;\n    }\n    20%{\n\t\tcolor: #fff537;\n\t\tbackground:#fff537;\n    }\n    30%{\n\t\tcolor: #ff4b5a;\n\t\tbackground:#ff4b5a;\n    }\n    40%{\n\t\tcolor: #57b846;\n\t\tbackground:#57b846;\n    }\n    50%{\n\t\tcolor: #f74877;\n\t\tbackground:#f74877;\n    }\n    60%{\n\t\tcolor: #62d8b6;\n\t\tbackground:#62d8b6;\n    }\n    70%{\n\t\tcolor: #ff5f3d;\n\t\tbackground:#ff5f3d;\n    }\n    80%{\n\t\tcolor: #ff8e50;\n\t\tbackground:#ff8e50;\n    }\n    90%{\n\t\tcolor: #ffe048;\n\t\tbackground:#ffe048;\n    }\n    100%{\n\t   color: #17c6ee;\n\t   background:#17c6ee;\n    }\n}", ""]);
+exports.push([module.i, "body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,blockquote,th,td,p,header,footer,html{margin:0;padding:0;font-weight:normal;}\ninput,button,select,textarea{outline:none; vertical-align:middle;font-weight: 300;color:#333;}\ninput::-moz-focus-inner{ border: 0;padding: 0;}\nli{list-style:none;font-weight:normal;}\nem,i{font-style:normal;}\na,li,p{text-decoration: none;font-weight:300;color: #333;-webkit-tap-highlight-color:rgba(0,0,0,0);-moz-tap-highlight-color:rgba(0,0,0,0);-ms-tap-highlight-color:rgba(0,0,0,0);-o-tap-highlight-color:rgba(0,0,0,0);tap-highlight-color:rgba(0,0,0,0)}\nimg{border:none}\ntextarea{resize:none}\nheader,nav,section,article,footer,figure,figcaption{display:block;}\ninput[type=\"text\"],input[type=\"search\"],input[type=\"password\"]{ -ms-appearance: none; -o-appearance: none; -moz-appearance: none; -webkit-appearance: none; appearance: none; list-style: none;border: none;}\nbody{background: #e6e6e6;color:#404040;text-align:center;min-width:320px;width: 100%; min-height: 100%;font-family: \"Source Sans Pro\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;}\nhtml {background: #e6e6e6;max-width: 768px; min-width: 320px; width: 100%; min-height: 100%; margin: 0 auto;}\ninput[type=\"button\"], input[type=\"submit\"], input[type=\"reset\"] {-webkit-appearance: none;}\n.clearfix:after{ visibility:hidden; display:block; font-size:0; content:\" \"; clear:both; height:0;}\n.clearfix{ zoom:1;}\n\n/*device-width*/\n@media only screen and (max-width: 359px) { html { font-size:85%; } }\n@media only screen and (min-width: 360px) and (max-width: 399px) { html { font-size: 100%; } }\n@media only screen and (min-width: 400px) and (max-width: 479px) { html { font-size: 112.5%; } }\n@media only screen and (min-width: 480px) and (max-width: 539px) { html { font-size: 125%; } }\n@media only screen and (min-width: 540px) and (max-width: 599px) { html { font-size: 150%; } }\n@media only screen and (min-width: 600px) and (max-width: 639px) { html { font-size: 165%; } }\n@media only screen and (min-width: 640px) and (max-width: 719px) { html { font-size: 177.5%; } }\n@media only screen and (min-width: 720px) and (max-width: 767px) { html { font-size: 200%; } }\n@media only screen and (min-width: 768px) { html { font-size: 100%; } }\n\n.app{\n\twidth: 100%;\n\theight: auto;\n\tposition: relative;\n}\n.box{\n\twidth: 98%;\n\tmargin: .3rem auto;\n\tmin-height:20rem;\n\theight: auto;\n\tmargin-top:3.3rem;\n\tpadding-bottom: 1rem; \n\tbox-shadow: 0px 2px 3px #ccc;\n}\n.bg-box{\n\twidth: 100%;\n\theight: auto;\n\tbackground: -webkit-linear-gradient(left top, #edf6f8 , #88c5d6); /* Safari 5.1 - 6.0 */\n  \tbackground: -o-linear-gradient(bottom right, #edf6f8, #88c5d6); /* Opera 11.1 - 12.0 */\n    background: -moz-linear-gradient(bottom right, #edf6f8, #88c5d6); /* Firefox 3.6 - 15 */\n    background: linear-gradient(to bottom right, #edf6f8 , #88c5d6); /* 标准的语法 */\n}\n.footer{\n\twidth:98%;\n\tmargin: 0 auto;\n\tbackground: #fff;\n\tpadding: 1rem 0;\n\tfont-size: .9rem;\n\tbox-shadow: 1px 3px 5px #ccc;\n}\n.footer p{\n\tcolor: #a6b1b0;\n\tfont-weight: 300;\n\tline-height: 1.5rem;\n\theight: 1.5rem;\n\ttext-shadow: 2px 2px 2px #ccc;\n}\n.colorMove{\n\tanimation:colormove 20s linear infinite;\n    -webkit-animation:colormove 20s linear infinite;\n}\n\n@keyframes colormove {\n    0%{\n\t\tcolor: #17c6ee;\n\t\tbackground: #17c6ee;\n    }\n    10%{\n\t\tcolor: #ec5399;\n\t\tbackground:#ec5399;\n    }\n    20%{\n\t\tcolor: #57b846;\n\t\tbackground:#57b846;\n    }\n    30%{\n\t\tcolor: #ff4b5a;\n\t\tbackground:#ff4b5a;\n    }\n    40%{\n\t\tcolor: #57b846;\n\t\tbackground:#57b846;\n    }\n    50%{\n\t\tcolor: #f74877;\n\t\tbackground:#f74877;\n    }\n    60%{\n\t\tcolor: #62d8b6;\n\t\tbackground:#62d8b6;\n    }\n    70%{\n\t\tcolor: #ff5f3d;\n\t\tbackground:#ff5f3d;\n    }\n    80%{\n\t\tcolor: #ff8e50;\n\t\tbackground:#ff8e50;\n    }\n    90%{\n\t\tcolor: #62d8b6;\n\t\tbackground:#62d8b6;\n    }\n    100%{\n\t   color: #fa4251;\n\t   background:#fa4251;\n    }\n}\n@-webkit-keyframes colormove {\n    0%{\n\t\tcolor: #17c6ee;\n\t\tbackground:#17c6ee;\n    }\n    10%{\n\t\tcolor: #ec5399;\n\t\tbackground:#ec5399;\n    }\n    20%{\n\t\tcolor: #57b846;\n\t\tbackground:#57b846;\n    }\n    30%{\n\t\tcolor: #ff4b5a;\n\t\tbackground:#ff4b5a;\n    }\n    40%{\n\t\tcolor: #57b846;\n\t\tbackground:#57b846;\n    }\n    50%{\n\t\tcolor: #f74877;\n\t\tbackground:#f74877;\n    }\n    60%{\n\t\tcolor: #62d8b6;\n\t\tbackground:#62d8b6;\n    }\n    70%{\n\t\tcolor: #ff5f3d;\n\t\tbackground:#ff5f3d;\n    }\n    80%{\n\t\tcolor: #ff8e50;\n\t\tbackground:#ff8e50;\n    }\n    90%{\n\t\tcolor: #62d8b6;\n\t\tbackground:#62d8b6;\n    }\n    100%{\n\t   color: #17c6ee;\n\t   background:#17c6ee;\n    }\n}", ""]);
 
 // exports
 
@@ -14669,7 +14669,7 @@ exports = module.exports = __webpack_require__(7)(undefined);
 
 
 // module
-exports.push([module.i, "\n.onebox{\n    margin:0px;\n    width: 100%;\n    height: 100%;\n    position: fixed;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    overflow: hidden;\n    outline: 0;\n    -webkit-overflow-scrolling: touch;\n    background-color:#fff;\n    font-family:'PingFangSC-Medium';\n    font-weight: normal;\n}\n.onebox canvas{\n    position: absolute;\n    top:0;\n    left:0;\n    width: 100%;\n    height: 100%;\n}\n", ""]);
+exports.push([module.i, "\n.onebox{\n    margin:0px;\n    width: 100%;\n    height: 100%;\n    position: fixed;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    overflow: hidden;\n    outline: 0;\n    -webkit-overflow-scrolling: touch;\n    background-color:#fff;\n    font-family:'PingFangSC-Medium';\n    font-weight: normal; \n    box-shadow:0 0 5px #fff inset\n}\n.onebox canvas{\n    position: absolute;\n    top:0;\n    left:0;\n    width: 100%;\n    height: 100%;\n}\n", ""]);
 
 // exports
 
@@ -14938,15 +14938,20 @@ function applyToTag (styleElement, obj) {
 
             for (let i = 0; i < en.length; i++) {
 
+                var num = Math.random() * 10 > 5 ? Math.random() * 10 : -Math.random() * 10;
+                var num1 = Math.random() * 10 > 5 ? Math.random() * 5 : -Math.random() * 5;
                 en[i].time = (en[i].time - 0.1).toFixed(2) * 1;
                 en[i].siznum = (en[i].siznum + 0.1).toFixed(2) * 1;
+                en[i].left = (en[i].left - num) * 1;
+                en[i].top = (en[i].top - num1) * 1;
 
                 if (en[i].time <= 0) {
                     en.splice(i, "1");
                 }
             }
+
             curtime++;
-            if (curtime == t * 5) {
+            if (curtime == t * 10) {
                 clearInterval(timer);
             }
 
@@ -14960,7 +14965,7 @@ function applyToTag (styleElement, obj) {
 
             en.push(obj);
             // }
-        }, 200);
+        }, 100);
 
         return en;
     }
@@ -15000,7 +15005,12 @@ function applyToTag (styleElement, obj) {
             ctx1.clearRect(0, 0, w, h);
 
             for (let i = 0; i < en.length; i++) {
-                ctx1.fillStyle = "rgba(255,255,255,0.4)";
+                ctx1.fillStyle = "rgba(255,255,255,0.5)";
+                ctx1.strokeStyle = "rgba(255,255,255,0)";
+                ctx1.shadowOffsetX = 15; // 阴影Y轴偏移
+                ctx1.shadowOffsetY = 15; // 阴影X轴偏移
+                ctx1.shadowBlur = 14; // 模糊尺寸
+                ctx1.shadowColor = 'rgba(0, 0, 0, 0.5)'; // 颜色
                 ctx1.beginPath();
                 ctx1.arc(en[i].left, en[i].top, en[i].siznum, 0, 360);
                 ctx1.stroke();

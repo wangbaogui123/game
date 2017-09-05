@@ -8,18 +8,23 @@ export default (Vue , options = {})=>{
 
         timer = setInterval(function(){
 
-
             for(let i = 0;i < en.length;i++){
-
+                
+                var num = Math.random()*10 > 5 ? Math.random()*10 : -Math.random()*10
+                var num1 = Math.random()*10 > 5 ? Math.random()*5 : -Math.random()*5
                 en[i].time = (en[i].time - 0.1).toFixed(2)*1
                 en[i].siznum = (en[i].siznum + 0.1).toFixed(2)*1
+                en[i].left = (en[i].left -num)*1
+                en[i].top = (en[i].top -num1)*1
+                
 
                 if(en[i].time <= 0){
                     en.splice(i,"1");
                 }
             }
+
             curtime++;
-            if(curtime == t*5){
+            if(curtime == t*10){
                 clearInterval(timer);
             }
 
@@ -34,7 +39,7 @@ export default (Vue , options = {})=>{
                 en.push(obj);
             // }
             
-        },200)
+        },100)
 
         return en;
 
@@ -76,7 +81,12 @@ export default (Vue , options = {})=>{
             ctx1.clearRect(0,0,w,h); 
 
             for(let i = 0;i <en.length;i++){
-                ctx1.fillStyle = "rgba(255,255,255,0.4)";
+                ctx1.fillStyle = "rgba(255,255,255,0.5)";
+                ctx1.strokeStyle = "rgba(255,255,255,0)";
+                ctx1.shadowOffsetX = 15; // 阴影Y轴偏移
+                ctx1.shadowOffsetY = 15; // 阴影X轴偏移
+                ctx1.shadowBlur = 14; // 模糊尺寸
+                ctx1.shadowColor = 'rgba(0, 0, 0, 0.5)'; // 颜色
                 ctx1.beginPath();
                 ctx1.arc(en[i].left,en[i].top,en[i].siznum,0,360);
                 ctx1.stroke();

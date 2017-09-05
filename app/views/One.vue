@@ -45,6 +45,7 @@
         background-color:#fff;
         font-family:'PingFangSC-Medium';
         font-weight: normal; 
+        box-shadow:0 0 5px #fff inset
     }
     .onebox canvas{
         position: absolute;
