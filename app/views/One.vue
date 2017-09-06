@@ -2,8 +2,8 @@
 <template>
 
     <div>
-        <div class="onebox colorMove" v-canvasone="data">
-              <p class="top"> <span>体积：{{data.shownum}}g</span> <span>时间：{{data.time}}s</span> </p>
+        <div class="onebox" v-canvasone="data">
+              <p class="top" v-if="data.shownum != '0' && data.time != '0'"> <span>体积：{{data.shownum}}g</span> <span>时间：{{data.time}}s</span> </p>
         </div>
     </div> 
     
@@ -14,8 +14,8 @@
 
     var homeData = { 
           data:{
-              shownum:20,
-              time:60
+              shownum:0,
+              time:0
           } 
         }
 
@@ -47,7 +47,8 @@
         background-color:#fff;
         font-family:'PingFangSC-Medium';
         font-weight: normal; 
-        box-shadow:0 0 5px #fff inset
+        box-shadow:0 0 5px #fff inset;
+        /* background: #62d8b6; */
     }
     .onebox .mov-btn{
         position: absolute;
