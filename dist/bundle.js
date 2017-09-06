@@ -1282,7 +1282,7 @@ module.exports = function normalizeComponent (
 
                 if (en[y].top / 2 - btnsize / 2 < yy && en[y].top / 2 + btnsize / 2 > yy && en[y].left / 2 - btnsize / 2 < x && en[y].left / 2 + btnsize / 2 > x) {
                     data.shownum = (data.shownum * 1 + en[y].siznum * 1).toFixed(2);
-                    btnsize += en[y].siznum / 50 * 1;
+                    btnsize += en[y].siznum / 100 * 1;
                     en.splice(y, "1");
                 }
             }
@@ -1305,6 +1305,10 @@ module.exports = function normalizeComponent (
             ctx.drawImage(img, 0, 0, w, h);
         };
         ele.appendChild(canvas);
+
+        ele.getElementsByClassName("btngo")[0].addEventListener("click", function () {
+            beginGame();
+        }, false);
 
         function beginGame() {
 
@@ -1421,8 +1425,8 @@ module.exports = function (Vue) {
 
   // 1. 定义（路由）组件。
   // 可以从其他文件 import 进来
-  const home = __webpack_require__(53);
-  const one = __webpack_require__(54);
+  const home = __webpack_require__(55);
+  const one = __webpack_require__(56);
 
   // 2. 定义路由
   // 每个路由应该映射一个组件。 其中"component" 可以是
@@ -14482,6 +14486,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 
 var homeData = {
@@ -14496,7 +14502,8 @@ var homeData = {
     data: function () {
         return homeData;
     },
-    created: function () {}
+    created: function () {},
+    methods: {}
 
 });
 
@@ -14635,7 +14642,7 @@ exports = module.exports = __webpack_require__(1)(undefined);
 
 
 // module
-exports.push([module.i, "\n.onebox{\n    margin:0px;\n    width: 100%;\n    height: 100%;\n    position: fixed;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    overflow: hidden;\n    outline: 0;\n    -webkit-overflow-scrolling: touch;\n    background-color:#fff;\n    font-family:'PingFangSC-Medium';\n    font-weight: normal; \n    box-shadow:0 0 5px #fff inset;\n    /* background: #62d8b6; */\n}\n.onebox .mov-btn{\n    position: absolute;\n    z-index: 1;\n    background: #fff;\n    bottom:0;\n    left:0;\n    background: url(" + __webpack_require__(59) + ");\n    background-size: 100% 100%; \n    /* width: 20px;\n    height: 20px;\n    border-radius: 10px; */\n}\n.onebox .top{\n    background: rgba(0,0,0,0);\n    color:#fff;\n    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;\n}\n.onebox .top span{\n    float: right;\n    margin-right: 50px;\n    text-shadow: 1px 1px 3px #676767;\n}\n.onebox canvas{\n    position: absolute;\n    top:0;\n    left:0;\n    width: 100%;\n    height: 100%;\n}\n", ""]);
+exports.push([module.i, "\n.onebox{\n    margin:0px;\n    width: 100%;\n    height: 100%;\n    position: fixed;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    overflow: hidden;\n    outline: 0;\n    -webkit-overflow-scrolling: touch;\n    background-color:#fff;\n    font-family:'PingFangSC-Medium';\n    font-weight: normal; \n    box-shadow:0 0 5px #fff inset;\n    /* background: #62d8b6; */\n}\n.onebox .logobox{\n    position: relative;\n    z-index: 2;\n    width: 100%;\n    height: auto;\n    background: #fff;\n    padding: 50px 0;\n}\n.onebox .btngo{\n    width: 50%;\n    height: 50px;\n    z-index: 2;\n    position: relative;\n    border-radius:15px;\n    background: #7de8ad;\n    line-height: 50px;\n    margin: 100px auto;\n    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; \n    font-size: 25px;\n    box-shadow: 1px 2px 5px #333;\n}\n.onebox .logobox img{\n    display: block;\n    width: 100%;\n    height: auto;\n    position: relative;\n    z-index: 2;\n}\n.onebox .mov-btn{\n    position: absolute;\n    z-index: 1;\n    background: #fff;\n    bottom:0;\n    left:0;\n    background: url(" + __webpack_require__(51) + ");\n    background-size: 100% 100%; \n    /* width: 20px;\n    height: 20px;\n    border-radius: 10px; */\n}\n.onebox .top{\n    background: rgba(0,0,0,0);\n    color:#fff;\n    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;\n}\n.onebox .top span{\n    float: right;\n    margin-right: 50px;\n    text-shadow: 1px 1px 3px #676767;\n}\n.onebox canvas{\n    position: absolute;\n    top:0;\n    left:0;\n    width: 100%;\n    height: 100%;\n}\n", ""]);
 
 // exports
 
@@ -14644,7 +14651,7 @@ exports.push([module.i, "\n.onebox{\n    margin:0px;\n    width: 100%;\n    heig
 /* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "\n<div class=\"top\">\n\n    <div class=\"top-bar\">\n\n        <router-link to=\"/\">\n            <img src=\"" + __webpack_require__(51) + "\" />\n        </router-link>\n\n        <p>{{page}}</p>\n        <a class=\"right\" v-on:click=\"topFun()\">\n            <img src=\"" + __webpack_require__(52) + "\" />\n        </a>\n    </div>\n    \n    <div class=\"top-cont bg-box\" v-if = \"topShow\">\n\n        <div class=\"login-box\">\n        <p> \n            <router-link to=\"/one\">\n                one\n            </router-link>\n        </p>   \n        </div>      \n    </div>\n</div>\n\n";
+module.exports = "\n<div class=\"top\">\n\n    <div class=\"top-bar\">\n\n        <router-link to=\"/\">\n            <img src=\"" + __webpack_require__(52) + "\" />\n        </router-link>\n\n        <p>{{page}}</p>\n        <a class=\"right\" v-on:click=\"topFun()\">\n            <img src=\"" + __webpack_require__(54) + "\" />\n        </a>\n    </div>\n    \n    <div class=\"top-cont bg-box\" v-if = \"topShow\">\n\n        <div class=\"login-box\">\n        <p> \n            <router-link to=\"/one\">\n                one\n            </router-link>\n        </p>   \n        </div>      \n    </div>\n</div>\n\n";
 
 /***/ }),
 /* 50 */
@@ -14679,18 +14686,30 @@ if(false) {
 
 /***/ }),
 /* 51 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACy0lEQVRYR+2XTVLbQBCFu4cqmV2cE2BOANwAThA4AdaGkXZwAswJcFb2sDE3sHMCzAkwJ4CcIM4Ou4ru1FPNuASRJf+EcqWK2dnSqD9Nv9fdYtrw4g3Hp5UBer1efTKZ9Jl5HEVRHMfxeJWXKQTodDoNY8xpeKCI3KdpOgy//fW+qmb7mVmjKDpaBWIewKEx5o6I7omoQUTP1tpDBLu5udlXVVx7jKLoGP9NJpMhM+8w89HZ2dlomZMoBbDWsnOuRUSHAOh0Ok1jzDUR/bDWNp1z50T0xVp75Zy7JaJvRBRbaweLQiwMQER4KIJfWGvbPmB2AqraT5Ik9rCXIhKnaQqgyrUowCUR/RaR8+3t7YEX3wEzZ2lRVejjCTp4eXk5Nsb0VPUWUFUEpQBRFH2dTqfI9y6Cvb6+jo0xmfhU9ThN02cEgCiZeQAxMnMW1EPdVTmkSoSjEGxra6ueF997xcOW0+kUadqDGAEhIrdVDikEcM4ht324AEr3xzoTX9mxem2cQgc+XaUO+QtgjtJn4qvKKa57d1yr6nmSJN/LHPIGIGx8r3SIb1FV54oVLNuucsgMINiqSOnLFpcA4YvWUFUfarXaSZFD8gBKRCciMipS+iJHX3RP3iEicoKiBpuiyGVlPGxyzgHggojg+TosuEptL4LwDvlFRGhYVyho8wDg30dm3gs3rPrm7/fhBcOzca0IAHRtERmiEX0EgIgcGWP2iahlra2/SUFOvVkn/CiAfFv/PwFyk1DWiPwai8hFWa2ABpCCtU/At9ymiDRDdGMMYC7L0vavAbIBZRndfAJ8nsAyJ4BvgidmPijqgvkpeVER+q74ICK7YYwLewsnom63G0arFjNnc19YsB8z7zMzRvJsiQh+t8OQmr9fVRuqitH+MUmSbIrOr7mfZt1uFw/Ehp01G9JPVR3UarVWUXdd+dtwTajZ9o0D/AFylks/Lx8G9gAAAABJRU5ErkJggg=="
+module.exports = __webpack_require__.p + "btnbg.jpeg";
 
 /***/ }),
 /* 52 */
 /***/ (function(module, exports) {
 
-module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABiElEQVRYR+2XwVUCQQyGk2lAO7AEsQKxA61Abpm90QHYAbfd4UQJUAFYgZSgHWAD+X3xLavAvt15MgiHzXUyk28zSf4dpjMbnzk+7QBMp9MegBER9Ynoug4OwArAS5ZlqxTwFUAZ/A3AAsCciN73AzjnDOqRiJ5V9SEFRAVQFIUFJe+9BWi0EMKMiG5F5K7Nt229AgghbFR1mGWZHd5oeZ73nXNLEan253k+cM7dtO21dVX92Mb5DYDYtNYBFEUxYeZeDACAtfd+aL7JAGIC1/l0AMkykKIIj+qCo4vQ5gAzQ0Se2grK5gCAnvc+quqbzjuYhEQ0BzBzzm32N6rq9yRk5kFsy7Z9zI4WlP09JqL7ho2vqjpOMYZ35kAb6anWL0uO7QqYecTMJse19i9yzMwzVT0owk6Ot3fSyXFdBv7apsnEqAMIIYwBNI3wKknMvBCRyf4v2VFybADleyLmNlYiYv4//4QXJccmycx88DA5uRzb68ikttSCq5pcfhLRupPjmCqL9fkC8eSLMM3JSCAAAAAASUVORK5CYII="
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACy0lEQVRYR+2XTVLbQBCFu4cqmV2cE2BOANwAThA4AdaGkXZwAswJcFb2sDE3sHMCzAkwJ4CcIM4Ou4ru1FPNuASRJf+EcqWK2dnSqD9Nv9fdYtrw4g3Hp5UBer1efTKZ9Jl5HEVRHMfxeJWXKQTodDoNY8xpeKCI3KdpOgy//fW+qmb7mVmjKDpaBWIewKEx5o6I7omoQUTP1tpDBLu5udlXVVx7jKLoGP9NJpMhM+8w89HZ2dlomZMoBbDWsnOuRUSHAOh0Ok1jzDUR/bDWNp1z50T0xVp75Zy7JaJvRBRbaweLQiwMQER4KIJfWGvbPmB2AqraT5Ik9rCXIhKnaQqgyrUowCUR/RaR8+3t7YEX3wEzZ2lRVejjCTp4eXk5Nsb0VPUWUFUEpQBRFH2dTqfI9y6Cvb6+jo0xmfhU9ThN02cEgCiZeQAxMnMW1EPdVTmkSoSjEGxra6ueF997xcOW0+kUadqDGAEhIrdVDikEcM4ht324AEr3xzoTX9mxem2cQgc+XaUO+QtgjtJn4qvKKa57d1yr6nmSJN/LHPIGIGx8r3SIb1FV54oVLNuucsgMINiqSOnLFpcA4YvWUFUfarXaSZFD8gBKRCciMipS+iJHX3RP3iEicoKiBpuiyGVlPGxyzgHggojg+TosuEptL4LwDvlFRGhYVyho8wDg30dm3gs3rPrm7/fhBcOzca0IAHRtERmiEX0EgIgcGWP2iahlra2/SUFOvVkn/CiAfFv/PwFyk1DWiPwai8hFWa2ABpCCtU/At9ymiDRDdGMMYC7L0vavAbIBZRndfAJ8nsAyJ4BvgidmPijqgvkpeVER+q74ICK7YYwLewsnom63G0arFjNnc19YsB8z7zMzRvJsiQh+t8OQmr9fVRuqitH+MUmSbIrOr7mfZt1uFw/Ehp01G9JPVR3UarVWUXdd+dtwTajZ9o0D/AFylks/Lx8G9gAAAABJRU5ErkJggg=="
 
 /***/ }),
 /* 53 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "logo.png";
+
+/***/ }),
+/* 54 */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABiElEQVRYR+2XwVUCQQyGk2lAO7AEsQKxA61Abpm90QHYAbfd4UQJUAFYgZSgHWAD+X3xLavAvt15MgiHzXUyk28zSf4dpjMbnzk+7QBMp9MegBER9Ynoug4OwArAS5ZlqxTwFUAZ/A3AAsCciN73AzjnDOqRiJ5V9SEFRAVQFIUFJe+9BWi0EMKMiG5F5K7Nt229AgghbFR1mGWZHd5oeZ73nXNLEan253k+cM7dtO21dVX92Mb5DYDYtNYBFEUxYeZeDACAtfd+aL7JAGIC1/l0AMkykKIIj+qCo4vQ5gAzQ0Se2grK5gCAnvc+quqbzjuYhEQ0BzBzzm32N6rq9yRk5kFsy7Z9zI4WlP09JqL7ho2vqjpOMYZ35kAb6anWL0uO7QqYecTMJse19i9yzMwzVT0owk6Ot3fSyXFdBv7apsnEqAMIIYwBNI3wKknMvBCRyf4v2VFybADleyLmNlYiYv4//4QXJccmycx88DA5uRzb68ikttSCq5pcfhLRupPjmCqL9fkC8eSLMM3JSCAAAAAASUVORK5CYII="
+
+/***/ }),
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
@@ -14698,7 +14717,7 @@ var Component = __webpack_require__(9)(
   /* script */
   __webpack_require__(40),
   /* template */
-  __webpack_require__(56),
+  __webpack_require__(58),
   /* styles */
   null,
   /* scopeId */
@@ -14730,19 +14749,19 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 54 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(57)
+  __webpack_require__(59)
 }
 var Component = __webpack_require__(9)(
   /* script */
   __webpack_require__(41),
   /* template */
-  __webpack_require__(55),
+  __webpack_require__(57),
   /* styles */
   injectStyle,
   /* scopeId */
@@ -14774,7 +14793,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 55 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -14788,7 +14807,16 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "onebox"
   }, [(_vm.data.shownum != '0' && _vm.data.time != '0') ? _c('p', {
     staticClass: "top"
-  }, [_c('span', [_vm._v("体积：" + _vm._s(_vm.data.shownum) + "g")]), _vm._v(" "), _c('span', [_vm._v("时间：" + _vm._s(_vm.data.time) + "s")])]) : _vm._e()])])
+  }, [_c('span', [_vm._v("体积：" + _vm._s(_vm.data.shownum) + "g")]), _vm._v(" "), _c('span', [_vm._v("时间：" + _vm._s(_vm.data.time) + "s")])]) : _vm._e(), _vm._v(" "), (_vm.data.shownum == '0' && _vm.data.time == '0') ? _c('p', {
+    staticClass: "logobox"
+  }, [_c('img', {
+    attrs: {
+      "src": __webpack_require__(53),
+      "alt": ""
+    }
+  })]) : _vm._e(), _vm._v(" "), (_vm.data.shownum == '0' && _vm.data.time == '0') ? _c('p', {
+    staticClass: "btngo"
+  }, [_vm._v("立即试玩")]) : _vm._e()])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -14799,7 +14827,7 @@ if (false) {
 }
 
 /***/ }),
-/* 56 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -14846,7 +14874,7 @@ if (false) {
 }
 
 /***/ }),
-/* 57 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
@@ -14856,7 +14884,7 @@ var content = __webpack_require__(48);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(58)("67607b14", content, false);
+var update = __webpack_require__(60)("67607b14", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -14872,7 +14900,7 @@ if(false) {
 }
 
 /***/ }),
-/* 58 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -15091,12 +15119,6 @@ function applyToTag (styleElement, obj) {
   }
 }
 
-
-/***/ }),
-/* 59 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "btnbg.jpeg";
 
 /***/ })
 /******/ ]);

@@ -67,7 +67,7 @@ export default (Vue , options = {})=>{
 
                     if((en[y].top/2 - btnsize/2 < yy &&  en[y].top/2 + btnsize/2 > yy) && (en[y].left/2 - btnsize/2 < x && en[y].left/2 + btnsize/2 > x)){
                         data.shownum = (data.shownum*1 + en[y].siznum*1).toFixed(2);
-                        btnsize += en[y].siznum/50 * 1;
+                        btnsize += en[y].siznum/100 * 1;
                         en.splice(y,"1");
 
                     }
@@ -85,7 +85,7 @@ export default (Vue , options = {})=>{
         let canvas = document.createElement("canvas");
             canvas.width = w;
             canvas.height = h;
-            
+        
         let ctx = canvas.getContext('2d');
         let img = new Image();
             img.src = "./app/img/bg.png";
@@ -94,6 +94,10 @@ export default (Vue , options = {})=>{
             }
             ele.appendChild(canvas);
         
+        ele.getElementsByClassName("btngo")[0].addEventListener("click",function(){
+            beginGame();
+        },false)
+
         function beginGame(){
             
            
