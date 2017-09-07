@@ -1,3 +1,4 @@
+.box{padding-bottom:0; }
 .mint-swipe,.mint-swipe-items-wrap{overflow:hidden;position:relative;height:100%}
 .mint-swipe-items-wrap>div{position:absolute;-webkit-transform:translateX(-100%);
 transform:translateX(-100%);width:100%;height:auto;display:none}
@@ -43,6 +44,11 @@ transform:translateX(-100%);width:100%;height:auto;display:none}
 .home-list ul.list-ul{
     animation:mymove 20s linear infinite;
     -webkit-animation:mymove 20s linear infinite;
+}
+.home-ul{
+    width: 100%;
+    min-height: 18rem;
+    background: #fff;
 }
 
 @keyframes mymove {

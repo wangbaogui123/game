@@ -11,11 +11,14 @@
                         <a v-bind:href="item.href"><img v-bind:src="item.imgUrl" ></a>
                     </swipe-item>
                 </swipe>
-                <div class="home-list">
+                <!-- <div class="home-list">
                     <ul class="list-ul">
                         <li v-for="i in list" :key="i.$index">{{i}}</li>
                     </ul>
-                </div>  
+                </div>   -->
+                <div class="home-ul">
+
+                </div>
                 <div>
                     <div>
                         <p></p>

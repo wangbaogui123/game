@@ -62,6 +62,8 @@ input[type="button"], input[type="submit"], input[type="reset"] {-webkit-appeara
 	height: 1.5rem;
 	text-shadow: 2px 2px 2px #ccc;
 }
+
+
 .colorMove{
 	animation:colormove 20s linear infinite;
     -webkit-animation:colormove 20s linear infinite;
