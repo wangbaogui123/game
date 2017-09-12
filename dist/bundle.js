@@ -14623,6 +14623,54 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 __webpack_require__(50);
@@ -14830,13 +14878,17 @@ module.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABz
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(62)
+}
 var Component = __webpack_require__(9)(
   /* script */
   __webpack_require__(43),
   /* template */
   __webpack_require__(58),
   /* styles */
-  null,
+  injectStyle,
   /* scopeId */
   null,
   /* moduleIdentifier (server only) */
@@ -14972,9 +15024,20 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     })])])
   })), _vm._v(" "), _c('div', {
     staticClass: "home-ul"
-  }), _vm._v(" "), _vm._m(0)], 1)]), _vm._v(" "), _c('my-footer')], 1)
+  }, [_c('dl', [_vm._m(0), _vm._v(" "), _c('dd', [_vm._m(1), _vm._v(" "), _c('p', [_c('router-link', {
+    attrs: {
+      "to": "/one"
+    }
+  }, [_vm._v("\n                                试玩\n                            ")])], 1)])])])], 1)]), _vm._v(" "), _c('my-footer')], 1)
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('div', [_c('p'), _vm._v(" "), _c('div'), _vm._v(" "), _c('p'), _vm._v(" "), _c('p')])])
+  return _c('dt', [_c('img', {
+    attrs: {
+      "src": __webpack_require__(53),
+      "alt": ""
+    }
+  })])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('p', [_c('span', [_vm._v("类型：休闲")]), _vm._v(" "), _c('span', [_vm._v("推荐：5颗星")])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
@@ -15230,6 +15293,46 @@ function applyToTag (styleElement, obj) {
   }
 }
 
+
+/***/ }),
+/* 61 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(undefined);
+// imports
+
+
+// module
+exports.push([module.i, "\n.home-ul{\n    width: 100%;\n    height: auto;\n    margin-top: .3rem;\n}\n.home-ul dl{\n    height: 6rem;\n    width: 100%;\n    border-bottom:1px solid #ccc;\n}\n.home-ul dl dt{\n    float: left;\n    width: 50%;\n    height: 100%;\n}\n.home-ul dl dt img{\n    display: block;\n    height: 100%;\n    width: auto;\n}\n.home-ul dl dd {\n    font-size: .8rem;\n    color:#333;\n    padding: 1rem 0;\n    float: left;\n}\n.home-ul dl dd p{\n    height: 2.5rem;\n    line-height: 2.5rem;\n}\n.home-ul dl dd p:nth-child(1) span{\n    margin: 0 .5rem;\n}\n.home-ul dl dd p:nth-child(2) a{\n    display: block;\n    width: 4rem;\n    height: 1.5rem;\n    line-height: 1.5rem;\n    border-radius:.5rem;\n    background: #18e089;\n    color:#fff;\n    box-shadow: 1px 2px 3px #ccc;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 62 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(61);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(60)("2d655bbc", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3e0a5666\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Home.vue", function() {
+     var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-3e0a5666\",\"scoped\":false,\"hasInlineConfig\":false}!../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Home.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
 
 /***/ })
 /******/ ]);
